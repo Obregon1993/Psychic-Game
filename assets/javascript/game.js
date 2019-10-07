@@ -4,6 +4,7 @@ let loses = 0;
 let left = 9;
 let arrayg = [];
 let count = 0;
+let clearArray=[];
 
 
 let pcguess = letters[Math.floor(Math.random() * letters.length)];
@@ -18,6 +19,9 @@ document.onkeyup = function () {
         left = 9;
         document.getElementById('left').innerHTML = left;
         pcguess = letters[Math.floor(Math.random() * letters.length)];
+        arrayg=clearArray;
+        document.getElementById("arrayg").innerHTML="";
+        count =0;
         // here should i clear the guesses
     } else {
         if (pcguess != userguess) {
@@ -33,6 +37,9 @@ document.onkeyup = function () {
             left = 9;
             document.getElementById('left').innerHTML = left;
             pcguess = letters[Math.floor(Math.random() * letters.length)];
+            arrayg=clearArray;
+            document.getElementById("arrayg").innerHTML="";
+            count =0;
             // here should i clear the guesses
 
         }
